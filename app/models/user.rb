@@ -13,7 +13,7 @@ class User < ApplicationRecord
   has_many :relationships
   has_many :followings, through: :relationships, source: :follow
   has_many :reverse_of_relationships, class_name: "Relationships"
-  #foregin_key: "follow_id"読み込んでくれない
+  # ,foregin_key: "follow_id"
   has_many :followers, through: :reverse_of_relationships, source: :user
 
   #フォロー機能のメソッド
