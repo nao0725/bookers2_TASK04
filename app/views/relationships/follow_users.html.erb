@@ -1,6 +1,6 @@
 
 <main>
-      <h2>Follow users</h2>
+      <h2>Follower users</h2>
       <table class="table">
         <thead>
           <tr>
@@ -18,10 +18,10 @@
                 <!--フォローフォロワー機能-->
 
                 <td>
-                  <p>フォロー数：<%= @user.followings.count %></p>
+                  <p>フォロー数：<%= user.followings.count %></p>
                 </td>
                  <td>
-                  <p>フォロワー数：<%= @user.followings.count %></p>
+                  <p>フォロワー数：<%= user.followings.count %></p>
                 </td>
                 <td>
                   <% unless current_user == user %>

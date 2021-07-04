@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
 
   def index
+    @following = User.new
     @user = current_user
     @users = User.all
     @book = Book.new

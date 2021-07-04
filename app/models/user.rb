@@ -24,7 +24,7 @@ class User < ApplicationRecord
   end
   # 既存のフォロワーならフォロー解除する
   def unfollow(other_user)
-    relationships = self.relationships.find_by(follow_id: other_user_id)
+    relationships = self.relationships.find_by(follow_id: other_user.id)
     relationships.destroy if relationships
   end
   #フォロワーの中に含まれてない？
